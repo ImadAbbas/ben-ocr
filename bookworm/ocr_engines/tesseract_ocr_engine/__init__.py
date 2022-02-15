@@ -56,7 +56,10 @@ class TesseractOcrEngine(BaseOcrEngine):
             for lang in ocr_request.languages
         )
         recognized_text = pytesseract.image_to_string(
-            ocr_request.image.to_pil(), recog_lang_codes, nice=1
+            ocr_request.image.to_pil(),
+            recog_lang_codes,
+            nice=1,
+            config="OMP_THREAD_LIMIT=1"
         )
         return OcrResult(
             recognized_text=recognized_text,

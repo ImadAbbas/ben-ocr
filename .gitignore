@@ -111,3 +111,5 @@ venv.bak/
 Thumbs.db
 
 OCR_output.zip
+tesseract_ocr/*
+ocr_output_json/*
