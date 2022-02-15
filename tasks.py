@@ -62,7 +62,6 @@ def archive_json_output(c):
     with zipfile.ZipFile("OCR_output.zip", "w") as archive:
         for filename in JSON_OUTPUT_DIR.glob("*.json"):
             archive.write(filename, filename.name)
-        archive.write
     log.info("Created archive: OCR_output.zip ")
 
 
