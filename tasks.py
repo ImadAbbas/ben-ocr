@@ -1,13 +1,13 @@
 # coding: utf-8
 
 import os
-from io import BytesIO 
 import operator
 import contextlib
 import zipfile
 import fitz
 import requests
 import ujson
+from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from invoke import task
@@ -72,7 +72,7 @@ def archive_json_output(c):
     ],
     post=[
         archive_json_output,
-    ]
+    ],
 )
 def ocr(c):
     log.info("Starting BEN OCR tasks...")
